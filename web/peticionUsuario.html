@@ -12,15 +12,23 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+       <div class="container">
         <fieldset>
             <legend>Login</legend>
-        <form action="autenticado" method="GET">
-            <label for="usuario">Usuario: </label><br />
-            <input type="text" id="usuario" name="usuario" value="" /><br />
-            <label for="contraseña">Contraseña: </label><br />
-            <input type="text"  id="contraseña" name="contraseña" value="" /><br />
-            <input type="submit" value="Enviar" name="submit" /><br />
-        </form>
-            </fieldset>
+            <form role="form" action="autenticado" method="GET">
+               
+                <label for="usuario">Usuario: </label><br />
+                <input type="text" id="usuario" name="usuario" value="" 
+                       class="form-control" placeholder="Introduce tu usuario"/><br />
+               
+                 
+                <label for="contraseña">Contraseña: </label><br />
+                <input type="text"  id="contraseña" name="contraseña" value="" 
+                       class="form-control" placeholder="Introduce tu contraseña"/><br />
+          
+                <input  class="btn btn-primary" type="submit" value="Enviar" name="submit" /><br />
+            </form>
+        </fieldset>
+           </div>
     </body>
 </html>

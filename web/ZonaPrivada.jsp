@@ -16,17 +16,21 @@
             String usuario = (String) request.getSession().getAttribute("UserUsuario");
             if (usuario != null) {
         %>
+        <div class="container">
         <h1>Bienvenido a la zona privada</h1>
         <a href="ejerDado.jsp"> Ir al Juego</a><br />
         <br />
         <br />
         <a href="peticionUsuario.html"> Volver al formulario..</a>
+        </div>
 
         <%
         } else {
         %>
+        <div class="container">
         <h1> No tiene permiso para acceder aqui</h1>
         <a href=\"peticionUsuario.html\"> Volver al formulario..</a>
+        </div>
         <% }
 
         %>

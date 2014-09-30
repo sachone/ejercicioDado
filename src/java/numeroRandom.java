@@ -30,7 +30,7 @@ public class numeroRandom extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("application/json;charset=UTF-8");
         
         String usuario = (String) request.getSession().getAttribute("UserUsuario");
             if (usuario != null) {
