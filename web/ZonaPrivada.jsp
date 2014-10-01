@@ -17,19 +17,28 @@
             if (usuario != null) {
         %>
         <div class="container">
-        <h1>Bienvenido a la zona privada</h1>
-        <a href="ejerDado.jsp"> Ir al Juego</a><br />
-        <br />
-        <br />
-        <a href="peticionUsuario.html"> Volver al formulario..</a>
+
+            <h1>Zona privada</h1>
+
+            <br />
+
+            <blockquote>
+                <a  class="btn btn-success" href="ejerDado.jsp"> Juego del dado</a>
+                <br />
+                <br />
+
+                <a class="btn btn-success" href="peticionUsuario.html"> Volver al formulario..</a>
+            </blockquote>
+
+
         </div>
 
         <%
         } else {
         %>
         <div class="container">
-        <h1> No tiene permiso para acceder aqui</h1>
-        <a href=\"peticionUsuario.html\"> Volver al formulario..</a>
+            <h1> No tiene permiso para acceder aqui</h1>
+            <a href=\"peticionUsuario.html\"> Volver al formulario..</a>
         </div>
         <% }
 

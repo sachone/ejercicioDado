@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Login</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,18 +15,18 @@ and open the template in the editor.
        <div class="container">
         <fieldset>
             <legend>Login</legend>
-            <form role="form" action="autenticado" method="GET">
+            <form class="form-signnin" action="autenticado" method="GET">
                
-                <label for="usuario">Usuario: </label><br />
+                
                 <input type="text" id="usuario" name="usuario" value="" 
                        class="form-control" placeholder="Introduce tu usuario"/><br />
                
                  
-                <label for="contraseña">Contraseña: </label><br />
-                <input type="text"  id="contraseña" name="contraseña" value="" 
+              
+                <input type="password" id="contraseña" name="contraseña" value="" 
                        class="form-control" placeholder="Introduce tu contraseña"/><br />
           
-                <input  class="btn btn-primary" type="submit" value="Enviar" name="submit" /><br />
+                <input  class="btn btn-large btn-primary" type="submit" value="Enviar" name="submit" /><br />
             </form>
         </fieldset>
            </div>

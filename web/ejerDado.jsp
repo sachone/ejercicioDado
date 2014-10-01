@@ -13,12 +13,12 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>juego dado</title>
         <style>
-            
+
             td{
                 height: 150px;
                 width: 150px;
                 text-align: center;
-              
+
             }
         </style>
     </head>
@@ -31,17 +31,11 @@
             if (usuario != null) {
         %>
 
-
         <div class="container">
-            
-            <h1>Bienvenido al juego del dado</h1><br />
-            <br />
-            
-            <div>
-                <h1 id="idDado">0</h1>
-            
-            </div>
-            <input class="btn btn-primary" type="submit" id="lanzar" value="Lanzar Dado" name="Lanzar" /><br />
+
+            <h1>Bienvenido al juego del dado</h1> 
+
+
             <br />
             <br />
             <div>
@@ -72,9 +66,19 @@
                     </tr>
                 </table>
             </div>
+
+            <h1 id="idDado">0</h1>
+
+            <input class="btn btn-primary" type="submit" id="lanzar" value="Lanzar Dado" name="Lanzar" />
+
             <br />
             <br />
-            <a class="btn btn-danger" href="autenticado?logout=logout"> LOGOUT</a>
+
+            <div class="row">
+                <div class="col-md-10 col-md-offset-10">
+                    <a  class="btn btn-danger" href="autenticado?logout=logout"> LOGOUT</a>
+                </div>
+            </div>
 
         </div>
         <script type="text/javascript">

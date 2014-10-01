@@ -35,47 +35,69 @@ public class autenticado extends HttpServlet {
             String logout = (String) request.getParameter("logout");
             HttpSession oSession = request.getSession();
 
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet NewServlet</title>");
+            out.println("<link rel=\"stylesheet\" href=\"//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css\">");
+            out.println("</head>");
+            out.println("<body>");
 
             /* TODO output your page here. You may use following sample code. */
-            if("logout".equals(logout)){
+            if ("logout".equals(logout)) {
                 oSession.invalidate();
-                out.println("<p> Sesión Acabada </p>");
+                out.println("<div class=\"container\">");
+                out.println("<h2> Sesión Acabada </h2>");
                 out.println("<a href=\"peticionUsuario.html\"> Volver al formulario</a>");
+                out.println("</div>");
             }
             switch (usuario) {
                 case "victor":
                     if ("vic123".equals(contraseña)) {
-                        out.println("<p> Bienvenido " + usuario + "</p>");
+                        out.println("<div class=\"container\">");
+                        out.println("<h2> Bienvenido " + usuario + "</h2>");
                         out.println("<a href=\"ZonaPrivada.jsp\"> ZONA PRIVADA</a> <br />");
                         out.println("<a href=\"autenticado?logout=logout\"> LOGOUT</a>");
+                        out.println("</div>");
                         oSession.setAttribute("UserUsuario", usuario);
+                        
 
                     } else {
-                        out.println("<p> Lo siento, su contraseña es incorrecta, vuelva a intentarlo </p>");
+                        out.println("<div class=\"container\">");
+                        out.println("<h2> Lo siento, su contraseña es incorrecta, vuelva a intentarlo </h2>");
                         out.println("<a href=\"peticionUsuario.html\"> Volver..</a>");
+                        out.println("</div>");
                     }
                     break;
 
                 case "admin":
                     if ("admin".equals(contraseña)) {
-                        out.println("<p> Bienvenido " + usuario + "</p>");
+                        out.println("<div class=\"container\">");
+                        out.println("<h2> Bienvenido " + usuario + "</h2>");
                         out.println("<a href=\"ZonaPrivada.jsp\"> ZONA PRIVADA</a> <br />");
                         out.println("<a href=\"autenticado?logout=logout\"> LOGOUT</a>");
+                        out.println("</div>");
                         oSession.setAttribute("UserUsuario", usuario);
 
                     } else {
-                        out.println("<p> Lo siento, su contraseña es incorrecta, vuelva a intentarlo </p>");
+                        out.println("<div class=\"container\">");
+                        out.println("<h2> Lo siento, su contraseña es incorrecta, vuelva a intentarlo </h2>");
                         out.println("<a href=\"peticionUsuario.html\"> Volver..</a>");
+                        out.println("</div>");
                     }
                     break;
 
                 default:
-                    out.println("<p> Lo siento, su Usuario no existe </p>");
+                    out.println("<div class=\"container\">");
+                    out.println("<h2> Lo siento, su Usuario no existe </h2>");
                     out.println("<a href=\"peticionUsuario.html\"> Volver..</a>");
+                    out.println("</div>");
 
             }
-
+            out.println("</body>");
+            out.println("</html>");
         }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
