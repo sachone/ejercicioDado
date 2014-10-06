@@ -5,6 +5,7 @@
  */
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -54,13 +55,28 @@ public class autenticado extends HttpServlet {
             switch (usuario) {
                 case "victor":
                     if ("vic123".equals(contraseña)) {
+
+                        HashMap<String, Integer> existencias = new HashMap<String, Integer>();
+                        HashMap<String, Integer> carrito = new HashMap<String, Integer>();
+
+                        existencias.put("pulsera", 5);
+                        existencias.put("gafas", 5);
+                        existencias.put("cartera", 5);
+
+                        carrito.put("pulsera", 0);
+                        carrito.put("gafas", 0);
+                        carrito.put("cartera", 0);
+
+                        oSession.setAttribute("tienda", existencias);
+                        oSession.setAttribute("carrito",carrito);
+
                         out.println("<div class=\"container\">");
                         out.println("<h2> Bienvenido " + usuario + "</h2>");
                         out.println("<a href=\"ZonaPrivada.jsp\"> ZONA PRIVADA</a> <br />");
+                        out.println("<br />");
                         out.println("<a href=\"autenticado?logout=logout\"> LOGOUT</a>");
                         out.println("</div>");
                         oSession.setAttribute("UserUsuario", usuario);
-                        
 
                     } else {
                         out.println("<div class=\"container\">");

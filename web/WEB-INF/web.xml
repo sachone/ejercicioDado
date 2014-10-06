@@ -8,6 +8,10 @@
         <servlet-name>numeroRandom</servlet-name>
         <servlet-class>numeroRandom</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>carrito</servlet-name>
+        <servlet-class>carrito</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>autenticado</servlet-name>
         <url-pattern>/autenticado</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>numeroRandom</servlet-name>
         <url-pattern>/numeroRandom</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>carrito</servlet-name>
+        <url-pattern>/carrito</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

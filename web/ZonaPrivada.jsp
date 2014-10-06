@@ -26,8 +26,11 @@
                 <a  class="btn btn-success" href="ejerDado.jsp"> Juego del dado</a>
                 <br />
                 <br />
+                <a  class="btn btn-success" href="carrito.jsp"> Carrito de la compra</a>
+                <br />
+                <br />
 
-                <a class="btn btn-success" href="peticionUsuario.html"> Volver al formulario..</a>
+                <a class="btn btn-danger" href="peticionUsuario.html"> Volver al formulario..</a>
             </blockquote>
 
 
@@ -38,7 +41,7 @@
         %>
         <div class="container">
             <h1> No tiene permiso para acceder aqui</h1>
-            <a href=\"peticionUsuario.html\"> Volver al formulario..</a>
+            <a href="peticionUsuario.html"> Volver al formulario..</a>
         </div>
         <% }
 
